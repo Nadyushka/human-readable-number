@@ -10,7 +10,11 @@ module.exports = function toReadable(a) {
 
 	// простые числа
 	if (b == 1) {
-		return simple[a];
+		if (a === 0) {
+			return 'zero';
+		} else {
+			return simple[a];
+		}
 	}
 
 	// от 10 до 99
@@ -94,6 +98,5 @@ module.exports = function toReadable(a) {
 				return simple[Number(c[0])] + ' ' + more[2] + ' ' + simple[Number(c[1])] + ' ' + more[1] + ' ' + twenties[Number(c[2]) + 1];
 			}
 		}
-
 	}
 }
