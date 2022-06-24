@@ -29,8 +29,9 @@ module.exports = function toReadable(a) {
 	// от 100 до 999
 
 	else if (b == 3) {
-
-		if (c[1] == 0) {
+		if (c[1] == 0 && c[2] == 0) {
+			return simple[Number(c[0])] + ' ' + more[1];
+		} else if (c[1] == 0) {
 			return simple[Number(c[0])] + ' ' + more[1] + ' ' + simple[Number(c[2])];
 		}
 		else if (c[2] == 0) {
